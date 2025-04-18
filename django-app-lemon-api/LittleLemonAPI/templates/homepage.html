@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Little Lemon – Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdfdfd;
+            color: #333;
+            padding: 2rem;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            margin: 1rem 0;
+        }
+        a {
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #1abc9c;
+        }
+        .route {
+            background: #f0f0f0;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .route:hover {
+            background: #e8f8f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Welcome to the Little Lemon Project</h1>
+    <p>Here are your available routes:</p>
+    <ul>
+        {% for route in routes %}
+            <li class="route">
+                <a href="{{ route.url }}">{{ route.label }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
